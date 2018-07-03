@@ -65,12 +65,13 @@
 ###  Diseño visual atractivo para el visitante, con imágenes, textos y colores.
 ###  Estructura clara y lógicamente una jerarquía visual.
 ###  Botones para seleccionar secciones y para enviar solicitud en contactar.
+###  Cuenta con inicio, nosotros, galería, compañia y contacto.
 
 ## - Interfaz UX
-###  Imágenes y colores seleccionados para hacer de la pagína llamativa y que al visitante lector le preste curiosidad seguir en el sitio.
+###  Imágenes y colores seleccionados para hacer de la pagína llamativa para que al visitante y lector le preste curiosidad seguir en el sitio.
 ###  Textos con información real y concreta, tabla de horarios correspondientes a clases.
-###  Galerías de fotos con galas, compañia y de directora de la academia.
-###  Información sobre recurso personas que conforma esta academia.
+###  Galerías de fotos con galas, presentaciones de competencias, compañia y de directora de la academia.
+###  Información sobre recurso personas que conforman esta academia.
 ###  Datos de contacto y formularios para preguntas, comentarios etc.
-### mapade ubicacion de academia.
-### link que redireccionan a sitios deredes sociales.
+### mapa de ubicacion de academia.
+### links que redireccionan a sitios de redes sociales reales de academia.
