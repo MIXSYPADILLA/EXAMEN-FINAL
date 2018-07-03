@@ -73,4 +73,4 @@
 ###  Información sobre recurso personas que conforma esta academia.
 ###  Datos de contacto y formularios para preguntas, comentarios etc.
 ### mapade ubicacion de academia.
-### link que redireccionan a citios deredes sociales.
+### link que redireccionan a sitios deredes sociales.
