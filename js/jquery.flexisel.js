@@ -1,14 +1,3 @@
-/*
-* File: jquery.flexisel.js
-* Version: 1.0.0
-* Description: Responsive carousel jQuery plugin
-* Author: 9bit Studios
-* Copyright 2012, 9bit Studios
-* http://www.9bitstudios.com
-* Free to use and abuse under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-*/
-
 (function ($) {
 
     $.fn.flexisel = function (options) {
@@ -36,22 +25,12 @@
 	    		}
         	}
         }, options);
-        
-		/******************************
-		Private Variables
-		*******************************/         
-        
         var object = $(this);
 		var settings = $.extend(defaults, options);        
 		var itemsWidth; // Declare the global width of each item in carousel
 		var canNavigate = true; 
         var itemsVisible = settings.visibleItems; 
-        
-		/******************************
-		Public Methods
-		*******************************/        
-        
-        var methods = {
+         var methods = {
         		
 			init: function() {
 				
@@ -61,11 +40,6 @@
         			methods.initializeItems();
 				});
 			},
-
-			/******************************
-			Initialize Items
-			*******************************/			
-			
 			initializeItems: function() {
 				
 				var listParent = object.parent();
@@ -83,12 +57,6 @@
 				$(window).trigger("resize"); // needed to position arrows correctly
 
 			},
-			
-			
-			/******************************
-			Append HTML
-			*******************************/			
-			
 			appendHTML: function() {
 				
    			 	object.addClass("nbs-flexisel-ul");
@@ -106,11 +74,6 @@
    			 	var cloneContent = object.children().clone();
    			 	object.append(cloneContent);
 			},
-					
-			
-			/******************************
-			Set Event Handlers
-			*******************************/
 			setEventHandlers: function() {
 				
 				var listParent = object.parent();
@@ -166,10 +129,6 @@
 				
 			},
 			
-			/******************************
-			Set Responsive Events
-			*******************************/			
-			
 			setResponsiveEvents: function() {
 				var contentWidth = $('html').width();
 				
@@ -188,10 +147,6 @@
 					}
 				}
 			},			
-			
-			/******************************
-			Scroll Left
-			*******************************/				
 			
 			scrollLeft:function() {
 
@@ -222,10 +177,6 @@
 				}
 			},
 			
-			/******************************
-			Scroll Right
-			*******************************/				
-			
 			scrollRight:function() {
 				
 				if(canNavigate == true) {
@@ -254,10 +205,6 @@
 					);
 				}
 			},
-			
-			/******************************
-			Adjust Scroll 
-			*******************************/
 			
 			adjustScroll: function() {
 				
