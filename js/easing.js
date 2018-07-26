@@ -1,4 +1,3 @@
-jQuery.extend( jQuery.easing,
 {
 	easeInQuad: function (x, t, b, c, d) {
 		return c*(t/=d)*t + b;

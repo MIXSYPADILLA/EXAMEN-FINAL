@@ -25,12 +25,14 @@
 	    		}
         	}
         }, options);
-        var object = $(this);
+        
+         var object = $(this);
 		var settings = $.extend(defaults, options);        
-		var itemsWidth; // Declare the global width of each item in carousel
+		var itemsWidth; 
 		var canNavigate = true; 
-        var itemsVisible = settings.visibleItems; 
-         var methods = {
+        var itemsVisible = settings.visibleItems;       
+        
+        var methods = {
         		
 			init: function() {
 				
@@ -46,7 +48,7 @@
 				var innerHeight = listParent.height(); 
 				var childSet = object.children();
 				
-    			var innerWidth = listParent.width(); // Set widths
+    			var innerWidth = listParent.width(); 
     			itemsWidth = (innerWidth)/itemsVisible;
     			childSet.width(itemsWidth);
     			childSet.last().insertBefore(childSet.first());
@@ -54,7 +56,7 @@
     			object.css({'left' : -itemsWidth}); 
 
     			object.fadeIn();
-				$(window).trigger("resize"); // needed to position arrows correctly
+				$(window).trigger("resize");
 
 			},
 			appendHTML: function() {
@@ -127,7 +129,7 @@
 					}, settings.autoPlaySpeed);
 				}
 				
-			},
+			},		
 			
 			setResponsiveEvents: function() {
 				var contentWidth = $('html').width();
@@ -146,7 +148,7 @@
 						itemsVisible = settings.visibleItems;
 					}
 				}
-			},			
+			},				
 			
 			scrollLeft:function() {
 
@@ -168,14 +170,14 @@
 							duration:settings.animationSpeed,
 							easing: "linear",
 							complete: function() {  
-								childSet.last().insertBefore(childSet.first()); // Get the first list item and put it after the last list item (that's how the infinite effects is made)   								
+								childSet.last().insertBefore(childSet.first());
 								methods.adjustScroll();
 								canNavigate = true; 
 							}
 						}
 					);
 				}
-			},
+			},			
 			
 			scrollRight:function() {
 				
@@ -197,7 +199,7 @@
 							duration:settings.animationSpeed,
 							easing: "linear",
 							complete: function() {  
-								childSet.first().insertAfter(childSet.last()); // Get the first list item and put it after the last list item (that's how the infinite effects is made)   
+								childSet.first().insertAfter(childSet.last()); 
 								methods.adjustScroll();
 								canNavigate = true; 
 							}
@@ -219,9 +221,9 @@
         
         };
         
-        if (methods[options]) { 	// $("#element").pluginName('methodName', 'arg1', 'arg2');
+        if (methods[options]) { 
             return methods[options].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof options === 'object' || !options) { 	// $("#element").pluginName({ option: 1, option:2 });
+        } else if (typeof options === 'object' || !options) { 	
             return methods.init.apply(this);  
         } else {
             $.error( 'Method "' +  method + '" does not exist in flexisel plugin!');
